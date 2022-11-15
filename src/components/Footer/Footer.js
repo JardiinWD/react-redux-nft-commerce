@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NftDetails = () => {
+const Footer = () => {
     return (
         <div>
-            NftDetails
+            Footer
         </div>
     )
 }
 
-export default NftDetails
+export default Footer

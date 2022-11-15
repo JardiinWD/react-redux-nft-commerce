@@ -12,9 +12,7 @@ import EditProfile from '../pages/EditProfile'
 import Wallet from '../pages/Wallet'
 import NftDetails from '../pages/NftDetails'
 
-
-
-const routers = () => {
+const Routers = () => {
     return (
         <Routes>
             {/* navigate to home */}
@@ -39,4 +37,4 @@ const routers = () => {
     )
 }
 
-export default routers
+export default Routers
