@@ -51,7 +51,7 @@ const Header = () => {
                                         /* nav_item */
                                         <li className="nav_item" key={index}>
                                             {/* NavLink */}
-                                            <NavLink to={link.url}>{link.display}</NavLink>
+                                            <NavLink to={link.url} className={navClass => navClass.isActive ? 'active' : ''} > {link.display}</NavLink>
                                         </li>
                                     )
                                 })
@@ -61,11 +61,13 @@ const Header = () => {
                     {/* nav_right */}
                     <div className="nav_right d-flex align-items-center gap-5">
                         {/* btn */}
-                        <button className="btn">
+                        <button className="btn d-flex gap-2 align-items-center">
+                            {/* ri-wallet-line */}
+                            <span>
+                                <i className="ri-wallet-line"></i>
+                            </span>
                             {/* d-flex gap-2 align-items-center */}
-                            <Link to='/wallet' className="d-flex gap-2 align-items-center">
-                                {/* ri-wallet-line */}
-                                <span><i className="ri-wallet-line"></i></span>
+                            <Link to='/wallet'>
                                 Connect Wallet
                             </Link>
                         </button>
@@ -76,7 +78,7 @@ const Header = () => {
                     </div>
                 </div>
             </Container>
-        </header>
+        </header >
     )
 }
 
