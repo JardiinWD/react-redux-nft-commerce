@@ -28,8 +28,17 @@
 
 /* .nft_title */
 .nft_title {
-    font-size: 1rem;
     margin-bottom: 15px;
+}
+
+.nft_title a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.nft_title a:hover {
+    color: inherit;
 }
 
 .creator_img {

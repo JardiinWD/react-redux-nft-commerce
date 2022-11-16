@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import './Header.css'
-import { Container, NavItem } from 'reactstrap'
+import { Container } from 'reactstrap'
 import { NavLink, Link } from 'react-router-dom'
 
 const NAV_LINKS = [
@@ -24,9 +24,32 @@ const NAV_LINKS = [
 
 
 const Header = () => {
+
+    // Create the headerRef variable
+    const headerRef = useRef(null)
+
+    // useEffect hook for header class
+    useEffect(() => {
+        // Add an event on window wherever I scroll
+        window.addEventListener('scroll', () => {
+            // Check if I scroll over 80px
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                // If it's true I will add header_shrink class
+                headerRef.current.classList.add('header_shrink')
+            } else {
+                // If it's true I will remove header_shrink class
+                headerRef.current.classList.remove('header_shrink')
+            }
+        })
+        // My cleanup function
+        return () => {
+            window.removeEventListener('scroll')
+        }
+    }, [])
+
     return (
         /* header */
-        <header className="header">
+        <header className="header" ref={headerRef}>
             {/* Container */}
             <Container>
                 {/* navigation */}
