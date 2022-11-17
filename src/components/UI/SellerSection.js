@@ -19,9 +19,9 @@ const SellerSection = () => {
                         </div>
                     </Col>
                     {
-                        SELLER__DATA.slice(0, 6).map(item => {
+                        SELLER__DATA.slice(0, 6).map((item, index) => {
                             return (
-                                <Col lg='2' md='3' sm='4' xs='6' key={item.id} className="mb-4">
+                                <Col lg='2' md='3' sm='4' xs='6' key={index} className="mb-4">
                                     {/* single_seller_card */}
                                     <div className="single_seller_card d-flex align-items-center gap-3">
                                         {/* seller_img */}

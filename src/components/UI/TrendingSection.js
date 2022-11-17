@@ -18,10 +18,10 @@ const TrendingSection = () => {
                         <h3 className="trending_title">Trending</h3>
                     </Col>
                     {
-                        NFT__DATA.slice(0, 8).map(item => {
+                        NFT__DATA.slice(0, 8).map((item, index) => {
                             return (
                                 /* lg='3' md='4' sm='6' */
-                                <Col lg='3' md='4' sm='6' key={item.id} className="mb-4">
+                                <Col lg='3' md='4' sm='6' key={index} className="mb-4">
                                     {/* NftCard Component */}
                                     <NftCard item={item} />
                                 </Col>

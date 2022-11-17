@@ -27,6 +27,8 @@ const Header = () => {
 
     // Create the headerRef variable
     const headerRef = useRef(null)
+    // Create the menuRef variable (SideBar menu)
+    const menuRef = useRef(null)
 
     // useEffect hook for header class
     useEffect(() => {
@@ -47,6 +49,9 @@ const Header = () => {
         }
     }, [])
 
+    // Fn that allows me to show/hide sidebar
+    const toggleMenu = () => menuRef.current.classList.toggle('active_menu')
+
     return (
         /* header */
         <header className="header" ref={headerRef}>
@@ -64,7 +69,7 @@ const Header = () => {
                         </h2>
                     </div>
                     {/* nav_menu */}
-                    <div className="nav_menu">
+                    <div className="nav_menu" ref={menuRef} onClick={toggleMenu}>
                         {/* nav_list */}
                         <ul className="nav_list">
                             {/* Nav Links map */}
@@ -96,7 +101,7 @@ const Header = () => {
                         </button>
                         {/* mobile_menu */}
                         <span className="mobile_menu">
-                            <i className="ri-menu-line"></i>
+                            <i className="ri-menu-line" onClick={toggleMenu}></i>
                         </span>
                     </div>
                 </div>

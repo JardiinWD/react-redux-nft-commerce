@@ -24,3 +24,16 @@
 .step_item_content {
     margin-top: 20px !important;
 }
+
+/* M.QUERIES : 992px */
+@media only screen and (max-width:992px) {
+    .step_item_content h5 a {
+        font-size: 0.9rem !important;
+        font-weight: bold;
+    }
+
+    .single_step_item p {
+        font-size: 0.8rem !important;
+        line-height: 25px;
+    }
+}

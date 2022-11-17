@@ -101,7 +101,7 @@ const Footer = () => {
                 {/* Row */}
                 <Row>
                     {/* lg='3' md='6' sm='6' */}
-                    <Col lg='3' md='6' sm='6'>
+                    <Col lg='3' md='6' sm='6' className="gy-4">
                         {/* logo */}
                         <div className='logo'>
                             {/* d-flex gap-2 align-items-center */}
@@ -119,22 +119,22 @@ const Footer = () => {
                         </div>
                     </Col>
                     {/* lg='2' md='3' sm='6' */}
-                    <Col lg='2' md='3' sm='6'>
+                    <Col lg='2' md='3' sm='6' className="gy-4">
                         {/* FooterLinks component */}
                         <FooterLinks data={MY_ACCOUNTS} title='My Accounts' />
                     </Col>
                     {/* lg='2' md='3' sm='6' */}
-                    <Col lg='2' md='3' sm='6'>
+                    <Col lg='2' md='3' sm='6' className="gy-4">
                         {/* FooterLinks component */}
                         <FooterLinks data={RESOURCES} title='Resources' />
                     </Col>
                     {/* lg='2' md='3' sm='6' */}
-                    <Col lg='2' md='3' sm='6'>
+                    <Col lg='2' md='3' sm='6' className="gy-4">
                         {/* FooterLinks component */}
                         <FooterLinks data={COMPANY} title='Company' />
                     </Col>
                     {/* lg='2' md='3' sm='6' */}
-                    <Col lg='3' md='3' sm='6'>
+                    <Col lg='3' md='3' sm='6' className="gy-4">
                         <h5>Newsletter</h5>
                         {/* newsletter */}
                         <input type="text" className="newsletter" placeholder='Email' />

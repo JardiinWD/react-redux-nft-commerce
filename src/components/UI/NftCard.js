@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './styles/NftCard.css'
+
 
 const NftCard = (props) => {
     // Destructuring of props
@@ -7,7 +9,7 @@ const NftCard = (props) => {
 
     return (
         /* single_nft_card */
-        <div className="single_nft_card">
+        <div key={id} className="single_nft_card">
             {/* nft_img */}
             <div className="nft_img" >
                 <img src={imgUrl} alt="" className="w-100" />
