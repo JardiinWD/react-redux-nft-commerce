@@ -103,7 +103,7 @@ export const NFT__DATA = [
     imgUrl: img09,
     creator: "Trista Francis",
     creatorImg: ava05,
-    currentBid: 5.89,
+    currentBid: 5.79,
   },
 ];
 
@@ -113,7 +113,7 @@ export const SELLER__DATA = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
     sellerName: "Ryan Carder",
     sellerImg: ava01,
-    currentBid: 5.89,
+    currentBid: 6.89,
     fbUrl: "#",
     instaUrl: "#",
     twitUrl: "#",
@@ -124,7 +124,7 @@ export const SELLER__DATA = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
     sellerName: "Trista Francis",
     sellerImg: ava02,
-    currentBid: 5.89,
+    currentBid: 6.69,
     fbUrl: "#",
     instaUrl: "#",
     twitUrl: "#",

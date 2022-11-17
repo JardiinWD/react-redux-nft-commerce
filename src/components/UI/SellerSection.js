@@ -1,7 +1,6 @@
 import React from 'react'
 import './styles/SellerSection.css'
 import { Container, Row, Col } from 'reactstrap'
-import ava01 from '../../assets/images/ava-01.png'
 import { SELLER__DATA } from '../../assets/data/data'
 
 
@@ -20,7 +19,7 @@ const SellerSection = () => {
                         </div>
                     </Col>
                     {
-                        SELLER__DATA.map((item, index) => {
+                        SELLER__DATA.slice(0, 6).map(item => {
                             return (
                                 <Col lg='2' md='3' sm='4' xs='6' key={item.id} className="mb-4">
                                     {/* single_seller_card */}

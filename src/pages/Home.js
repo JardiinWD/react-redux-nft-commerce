@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 import HeroSection from '../components/UI/HeroSection'
 import LiveAuction from '../components/UI/LiveAuction'
 import SellerSection from '../components/UI/SellerSection'
+import TrendingSection from '../components/UI/TrendingSection'
+import StepSection from '../components/UI/StepSection'
 
 
 const Home = () => {
@@ -13,6 +15,10 @@ const Home = () => {
             <LiveAuction />
             {/* SellerSection */}
             <SellerSection />
+            {/* TrendingSection */}
+            <TrendingSection />
+            {/* StepSection */}
+            <StepSection />
         </Fragment>
     )
 }
