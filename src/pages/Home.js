@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import HeroSection from '../components/UI/HeroSection'
 import LiveAuction from '../components/UI/LiveAuction'
 import SellerSection from '../components/UI/SellerSection'
 import TrendingSection from '../components/UI/TrendingSection'
 import StepSection from '../components/UI/StepSection'
-
+import Helmet from '../components/Utils/Helmet'
 
 const Home = () => {
     return (
-        <Fragment>
+        <Helmet title='Home'>
             {/* HeroSection */}
             <HeroSection />
             {/* LiveAuction */}
@@ -19,7 +19,7 @@ const Home = () => {
             <TrendingSection />
             {/* StepSection */}
             <StepSection />
-        </Fragment>
+        </Helmet>
     )
 }
 
