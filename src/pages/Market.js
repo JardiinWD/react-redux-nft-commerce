@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import CommonSection from '../components/UI/CommonSection'
 import Helmet from '../components/Utils/Helmet'
 import NftCard from '../components/UI/NftCard'
@@ -10,14 +10,41 @@ import './styles/Market.css'
 
 const Market = () => {
 
+    const [data, setData] = useState(NFT__DATA)
+
+    // Category filter Data Handler
     const handleCategory = () => {
 
     }
+    // Filtered Items Data Handler
     const handleItems = () => {
 
     }
-    const handleSort = () => {
-
+    // Sorting Data Handler (by price)
+    const handleSort = (e) => {
+        // Find what option was selected
+        const filterValue = e.target.value
+        // Then I create the statement for the option 'high'
+        if (filterValue === 'high') {
+            // I save in another variable all the filtered items where the current bid is greater or equal than 6.
+            const filterData = NFT__DATA.filter(item => item.currentBid >= 6)
+            // Then I update my state
+            setData(filterData)
+        }
+        // Else I create the statement for the option 'high'
+        if (filterValue === 'mid') {
+            // I save in another variable all the filtered items where the current bid is greater or equal than 5.5
+            const filterData = NFT__DATA.filter(item => item.currentBid > 5.5 && item.currentBid < 6)
+            // Then I update my state
+            setData(filterData)
+        }
+        // Else I create the statement for the option 'high'
+        if (filterValue === 'low') {
+            // I save in another variable all the filtered items where the current bid is greater or equal than 5.5
+            const filterData = NFT__DATA.filter(item => item.currentBid >= 4.89 && item.currentBid < 5.09)
+            // Then I update my state
+            setData(filterData)
+        }
     }
 
     return (
@@ -83,7 +110,7 @@ const Market = () => {
                                 </div>
                             </Col>
                             {
-                                NFT__DATA.map((item, index) => {
+                                data?.map((item, index) => {
                                     return (
                                         <Col key={index} lg='3' md='4' sm='6' className="mb-4">
                                             <NftCard item={item} />
