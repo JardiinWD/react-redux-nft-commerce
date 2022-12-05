@@ -12,13 +12,48 @@ const Market = () => {
 
     const [data, setData] = useState(NFT__DATA)
 
-    // Category filter Data Handler
-    const handleCategory = () => {
-
+    /** Filtered Type function
+     * 
+     * @param {string} type 
+     * @returns {object} Return the filtered data
+     */
+    const typeHandler = (type) => {
+        return NFT__DATA.filter(item => item.type === type)
     }
-    // Filtered Items Data Handler
-    const handleItems = () => {
 
+    // Category filter Data Handler
+    const handleCategory = (e) => {
+        // Find what option was selected
+        const filterValue = e.target.value
+        // Then I create the statement for the option 'art'
+        if (filterValue === 'art') {
+            const filterData = typeHandler('art')
+            setData(filterData)
+        }
+        // Or a statement for the option 'music'
+        if (filterValue === 'music') {
+            const filterData = typeHandler('music')
+            setData(filterData)
+        }
+        // Or a statement for the option 'domain-name'
+        if (filterValue === 'domain-name') {
+            const filterData = typeHandler('domain-name')
+            setData(filterData)
+        }
+        // Or a statement for the option 'virtual-world'
+        if (filterValue === 'virtual-world') {
+            const filterData = typeHandler('virtual-world')
+            setData(filterData)
+        }
+        // Or a statement for the option 'trending-card'
+        if (filterValue === 'trending-card') {
+            const filterData = typeHandler('trending-card')
+            setData(filterData)
+        }
+        // At least I create the statement for all categories' option
+        if (filterValue === 'all_cat') {
+            setData(NFT__DATA)
+        }
     }
     // Sorting Data Handler (by price)
     const handleSort = (e) => {
@@ -45,6 +80,10 @@ const Market = () => {
             // Then I update my state
             setData(filterData)
         }
+        // If I want to set my data as default
+        if (filterValue === 'all_sort') {
+            setData(NFT__DATA)
+        }
     }
 
     return (
@@ -69,7 +108,7 @@ const Market = () => {
                                         <div className="all_category_filter">
                                             {/* Options */}
                                             <select onChange={handleCategory}>
-                                                <option>All Categories</option>
+                                                <option value="all_cat">All Categories</option>
                                                 {/* Art */}
                                                 <option value="art">Art</option>
                                                 {/* Music */}
@@ -83,22 +122,20 @@ const Market = () => {
                                             </select>
                                         </div>
                                         {/* all_items_filter */}
-                                        <div className="all_items_filter">
-                                            {/* Options */}
-                                            <select onChange={handleItems}>
-                                                <option>All Items</option>
-                                                {/* Single Item */}
-                                                <option value="single-item">Single Item</option>
-                                                {/* Bundle */}
-                                                <option value="bundle">Bundle</option>
-                                            </select>
-                                        </div>
+                                        {/* <div className="all_items_filter">
+                                                <select onChange={handleItems}>
+                                                    <option>All Items</option>
+                                                    <option value="single-item">Single Item</option>
+                                                    <option value="bundle">Bundle</option>
+                                                </select>
+                                            </div> 
+                                        */}
                                     </div>
                                     {/* filter_right */}
                                     <div className="filter_right">
                                         {/* Options */}
                                         <select onChange={handleSort}>
-                                            <option>Sort By</option>
+                                            <option value="all_sort">Sort By</option>
                                             {/* Single Item */}
                                             <option value="high">High Rate</option>
                                             {/* Mid Rate */}

@@ -24,6 +24,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava01,
     currentBid: 5.89,
+    type: 'art',
+    optionValue: 'Art'
   },
 
   {
@@ -34,6 +36,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava02,
     currentBid: 5.09,
+    type: 'music',
+    optionValue: 'Music'
   },
 
   {
@@ -44,6 +48,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava03,
     currentBid: 6.89,
+    type: 'art',
+    optionValue: 'Art'
   },
 
   {
@@ -54,6 +60,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava04,
     currentBid: 7.89,
+    type: 'domain-name',
+    optionValue: 'Domain Name'
   },
 
   {
@@ -64,6 +72,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava05,
     currentBid: 4.89,
+    type: 'virtual-world',
+    optionValue: 'Virtual World'
   },
 
   {
@@ -74,6 +84,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava06,
     currentBid: 4.99,
+    type: 'trending-card',
+    optionValue: 'Trending Card'
   },
 
   {
@@ -84,6 +96,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava03,
     currentBid: 5.89,
+    type: 'trending-card',
+    optionValue: 'Trending Card'
   },
 
   {
@@ -94,6 +108,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava04,
     currentBid: 5.89,
+    type: 'domain-name',
+    optionValue: 'Domain Name'
   },
 
   {
@@ -104,6 +120,8 @@ export const NFT__DATA = [
     creator: "Trista Francis",
     creatorImg: ava05,
     currentBid: 5.79,
+    type: 'trending-card',
+    optionValue: 'Trending Card'
   },
 ];
 

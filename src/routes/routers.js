@@ -11,6 +11,8 @@ import SellerProfile from '../pages/SellerProfile'
 import EditProfile from '../pages/EditProfile'
 import Wallet from '../pages/Wallet'
 import NftDetails from '../pages/NftDetails'
+import ErrorPage from '../pages/ErrorPage'
+
 
 const Routers = () => {
     return (
@@ -19,6 +21,8 @@ const Routers = () => {
             <Route path='/' element={<Navigate to='/home' />} />
             {/* home */}
             <Route path='/home' element={<Home />} />
+            {/* ErrorPage */}
+            <Route path='*' element={<ErrorPage />} />
             {/* Market */}
             <Route path='/market' element={<Market />} />
             {/* Create */}
